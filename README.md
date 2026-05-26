@@ -29,6 +29,9 @@ Unlike basic testbenches, this framework focuses on categorisation of  **real-wo
 
 The complete structure which is divided into different section will be as follows
 
+## Circuit Types
+
+```text
 Circuit Types
 │
 ├── Sequential Logic
@@ -46,21 +49,22 @@ Circuit Types
 │
 ├── UART Controller
 │   ├── UART TX
-│   └── UART RX
-│   └── FIFO->UART
+│   ├── UART RX
+│   └── FIFO→UART
 │
 ├── Control Logic
 │   ├── FSM
 │   │   ├── Moore FSM
 │   │   └── Mealy FSM
 │   ├── UART TX/RX (simple)
-│   └── FSM Controller
-│   └── FSM_Controller->Counter
+│   ├── FSM Controller
+│   └── FSM_Controller→Counter
 │
 └── DSP Processing Modules
     ├── FIR Filter
-    └── Gaussian Filter
-    └──FIFO->FIR
+    ├── Gaussian Filter
+    └── FIFO→FIR
+```
 
 ##  Key Objectives
 
