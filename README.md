@@ -31,7 +31,7 @@ The complete structure which is divided into different section will be as follow
 
 ## Circuit Types
 
-```text
+```
 Circuit Types
 │
 ├── Sequential Logic
