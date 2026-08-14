@@ -1,0 +1,28 @@
+{
+  "id": "ring_counter_meta_buggy",
+  "module": "ring_counter_meta",
+  "category": "sequential_logic",
+  "bug_type": "METASTABILITY",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\ring_counter\\ring_counter_meta\\ring_counter_meta_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\ring_counter\\ring_counter_meta\\ring_counter_meta_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 0,
+    "ff_used": 0,
+    "worst_slack_ns": null,
+    "assertions_failed": 43,
+    "assert_tags": [
+      "METASTABILITY"
+    ],
+    "Number_of_Probe": 5,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 20
+  },
+  "notes": "Auto-generated metadata for ring_counter_meta."
+}

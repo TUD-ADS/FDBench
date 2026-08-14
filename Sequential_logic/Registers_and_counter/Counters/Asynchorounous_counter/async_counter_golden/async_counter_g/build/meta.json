@@ -1,0 +1,21 @@
+{
+  "id": "async_counter_golden",
+  "module": "async_counter",
+  "category": "Sequential",
+  "bug_type": "None",
+  "status": "Pass",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\async_counter\\async_counter_g\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\async_counter\\async_counter_g\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 6,
+    "ff_used": 8,
+    "worst_slack_ns": null,
+    "assertions_failed": 0,
+    "assert_tags": []
+  },
+  "notes": "Auto-generated metadata for async_counter."
+}

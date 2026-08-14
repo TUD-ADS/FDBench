@@ -1,0 +1,28 @@
+{
+  "id": "UART_RX_cdc_golden",
+  "module": "UART_RX_cdc",
+  "category": "uart",
+  "bug_type": "CDC_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\UART_RX\\UART_RX_cdc\\UART_RX_cdc_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\UART_RX\\UART_RX_cdc\\UART_RX_cdc_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 41,
+    "ff_used": 30,
+    "worst_slack_ns": null,
+    "assertions_failed": 4,
+    "assert_tags": [
+      "CDC_BUG"
+    ],
+    "Number_of_Probe": 7,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 4
+  },
+  "notes": "Auto-generated metadata for UART_RX_cdc."
+}

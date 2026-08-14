@@ -1,0 +1,28 @@
+{
+  "id": "moore_fsm_wfsm_buggy",
+  "module": "moore_fsm_wfsm",
+  "category": "control_logic",
+  "bug_type": "WRONG_TRANSITION_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\moore_fsm\\moore_fsm_wfsm\\moore_fsm_wfsm_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\moore_fsm\\moore_fsm_wfsm\\moore_fsm_wfsm_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 2,
+    "ff_used": 2,
+    "worst_slack_ns": null,
+    "assertions_failed": 81,
+    "assert_tags": [
+      "WRONG_TRANSITION_BUG"
+    ],
+    "Number_of_Probe": 6,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 40
+  },
+  "notes": "Auto-generated metadata for moore_fsm_wfsm."
+}

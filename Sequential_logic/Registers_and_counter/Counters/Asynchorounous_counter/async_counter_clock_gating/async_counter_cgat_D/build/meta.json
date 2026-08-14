@@ -1,0 +1,28 @@
+{
+  "id": "async_counter_cgat_buggy",
+  "module": "async_counter_cgat",
+  "category": "sequential_logic",
+  "bug_type": "CLOCK_GATTING",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\async_counter\\async_counter_cgat\\async_counter_cgat_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\async_counter\\async_counter_cgat\\async_counter_cgat_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 3,
+    "ff_used": 4,
+    "worst_slack_ns": null,
+    "assertions_failed": 24,
+    "assert_tags": [
+      "CLOCK_GATTING"
+    ],
+    "Number_of_Probe": 5,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 10
+  },
+  "notes": "Auto-generated metadata for async_counter_cgat."
+}

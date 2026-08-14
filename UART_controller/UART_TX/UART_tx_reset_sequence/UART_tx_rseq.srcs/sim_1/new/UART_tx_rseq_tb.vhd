@@ -1,0 +1,151 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity UART_tx_rseq_tb  is
+end UART_tx_rseq_tb;
+
+architecture behavior of UART_tx_rseq_tb is
+
+
+-- PARAMETERS
+
+
+constant CLK_PERIOD : time := 10 ns;
+constant CLKS_PER_BIT : integer := 868;
+
+
+-- SIGNALS
+
+
+signal clk       : std_logic := '0';
+signal rst       : std_logic := '0';
+
+signal tx_start  : std_logic := '0';
+signal tx_data   : std_logic_vector(7 downto 0) := (others => '0');
+
+signal tx_serial : std_logic;
+signal tx_busy   : std_logic;
+signal tx_done   : std_logic;
+
+signal frame_count : integer := 0;
+
+
+-- CLOCK GENERATION
+
+
+begin
+
+--clk <= not clk after CLK_PERIOD/2;
+
+
+-- DUT
+
+
+dut : entity work.UART_tx_rseq
+generic map(
+    CLKS_PER_BIT => CLKS_PER_BIT
+)
+port map(
+    clk       => clk,
+    rst       => rst,
+    tx_start  => tx_start,
+    tx_data   => tx_data,
+    tx_serial => tx_serial,
+    tx_busy   => tx_busy,
+    tx_done   => tx_done
+);
+
+
+clk_process : process
+begin
+    clk <= '0';
+    wait for CLK_PERIOD/2;
+
+    clk <= '1';
+    wait for CLK_PERIOD/2;
+end process clk_process;
+
+-- MAIN STIMULUS
+
+
+stimulus : process
+begin
+
+    
+    -- RESET
+    
+
+    rst <= '1';
+    wait for 100 ns;
+    rst <= '0';
+
+    wait for 200 ns;
+
+    
+    -- TRANSMIT BYTE 1
+    
+
+    tx_data <= x"A5";
+    tx_start <= '1';
+    wait for CLK_PERIOD;
+    tx_start <= '0';
+
+    --wait until tx_done = '1';
+    frame_count <= frame_count + 1;
+
+
+    
+    -- RESET DURING TRANSMISSION
+    
+
+    wait for 5 us;
+
+    tx_data <= x"F0";
+    tx_start <= '1';
+    wait for CLK_PERIOD;
+    tx_start <= '0';
+
+    wait for 3 us;
+
+    rst <= '1';
+    wait for 100 ns;
+    rst <= '0';
+    
+    wait for 100 ns;
+    assert tx_busy = '1'
+    report "ERROR:RESET_SEQUENCE"
+    severity error;
+
+    
+    -- GLITCH TEST (metastability-like stimulus)
+    
+
+    wait for 5 us;
+
+    tx_data <= x"77";
+
+    tx_start <= '1';
+    wait for 2 ns;
+    tx_start <= '0';
+    wait for 3 ns;
+    tx_start <= '1';
+    wait for 1 ns;
+    tx_start <= '0';
+    
+        assert tx_busy = '1'
+    report "ERROR:RESET_SEQUENCE"
+    severity error;
+
+       wait for 20 ns;
+
+    report "Simulation completed successfully" severity note;
+    std.env.stop;
+
+end process;
+
+
+
+end behavior;
+

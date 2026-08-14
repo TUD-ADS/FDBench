@@ -1,0 +1,28 @@
+{
+  "id": "t_f_rseq_buggy",
+  "module": "t_f_rseq",
+  "category": "sequential_logic",
+  "bug_type": "RESET_SEQUENCE",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\t_f\\t_f_rseq\\t_f_rseq_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\t_f\\t_f_rseq\\t_f_rseq_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 1,
+    "ff_used": 1,
+    "worst_slack_ns": null,
+    "assertions_failed": 2,
+    "assert_tags": [
+      "RESET_SEQUENCE"
+    ],
+    "Number_of_Probe": 5,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 2
+  },
+  "notes": "Auto-generated metadata for t_f_rseq."
+}

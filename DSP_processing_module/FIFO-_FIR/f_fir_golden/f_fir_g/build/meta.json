@@ -1,0 +1,26 @@
+{
+  "id": "f_fir_golden",
+  "module": "f_fir",
+  "category": "dsp_processing_module",
+  "bug_type": "None",
+  "status": "Pass",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg400-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_g\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_g\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 314,
+    "ff_used": 748,
+    "worst_slack_ns": null,
+    "assertions_failed": 0,
+    "assert_tags": [],
+    "Number_of_Probe": 12,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 0
+  },
+  "notes": "Auto-generated metadata for f_fir."
+}

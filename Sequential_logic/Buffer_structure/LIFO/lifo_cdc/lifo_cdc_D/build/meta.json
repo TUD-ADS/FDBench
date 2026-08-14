@@ -1,0 +1,28 @@
+{
+  "id": "lifo_cdc_buggy",
+  "module": "lifo_cdc",
+  "category": "sequential_logic",
+  "bug_type": "CDC_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\lifo\\lifo_cdc\\lifo_cdc_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\lifo\\lifo_cdc\\lifo_cdc_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 31,
+    "ff_used": 14,
+    "worst_slack_ns": null,
+    "assertions_failed": 20,
+    "assert_tags": [
+      "CDC_BUG"
+    ],
+    "Number_of_Probe": 10,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 12
+  },
+  "notes": "Auto-generated metadata for lifo_cdc."
+}

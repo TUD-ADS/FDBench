@@ -1,0 +1,28 @@
+{
+  "id": "f_fir_over_buggy",
+  "module": "f_fir_over",
+  "category": "dsp_processing_module",
+  "bug_type": "OVERFLOW_DETECTED",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg400-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_over\\f_fir_over_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_over\\f_fir_over_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 29,
+    "ff_used": 529,
+    "worst_slack_ns": null,
+    "assertions_failed": 28,
+    "assert_tags": [
+      "OVERFLOW_DETECTED"
+    ],
+    "Number_of_Probe": 12,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 13
+  },
+  "notes": "Auto-generated metadata for f_fir_over."
+}

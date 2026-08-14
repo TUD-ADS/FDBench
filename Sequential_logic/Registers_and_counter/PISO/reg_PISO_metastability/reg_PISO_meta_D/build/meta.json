@@ -1,0 +1,28 @@
+{
+  "id": "reg_PISO_meta_buggy",
+  "module": "reg_PISO_meta",
+  "category": "sequential_logic",
+  "bug_type": "METASTABILITY",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\reg_PISO\\reg_PISO_meta\\reg_PISO_meta_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\reg_PISO\\reg_PISO_meta\\reg_PISO_meta_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 5,
+    "ff_used": 15,
+    "worst_slack_ns": null,
+    "assertions_failed": 2,
+    "assert_tags": [
+      "METASTABILITY"
+    ],
+    "Number_of_Probe": 7,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 2
+  },
+  "notes": "Auto-generated metadata for reg_PISO_meta."
+}

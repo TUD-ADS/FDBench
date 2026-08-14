@@ -1,0 +1,1486 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Apr  3 11:58:36 2026
+# Process ID: 20524
+# Current directory: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta
+# Command line: vivado.exe -mode batch -source build.tcl
+# Log file: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/vivado.log
+# Journal file: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta\vivado.jou
+# Running On: Milan, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 6297 MB
+#-----------------------------------------------------------
+source build.tcl
+# set main_project_name "FIR_Filter_meta_D"
+# set proj_name   "FIR_Filter_meta_bug"
+# set proj_dir    "./$main_project_name/FIR_Filter_meta_"
+# set build_dir   "./$main_project_name/build"
+# set part        "xc7z020clg484-1"
+# set rtl_glob    "./$main_project_name/rtl/*.vhd"
+# set tb_glob     "./$main_project_name/tb/*_tb.vhd"
+# set xdc_glob    "./constraints/*.xdc"
+# set rtl_top_e   "FIR_Filter_meta"
+# set tb_top_e   "FIR_Filter_meta_tb"
+# set rtl_top     "./$main_project_name/rtl"
+# set tb_top      "./$main_project_name/tb"
+# set vivado_tool "Vivado 2022.2"
+# set rtl_dir     "./rtl"
+# set tb_dir      "./tb"
+# set src_dir [glob -type d ./*.srcs]
+# set full_src_rtl "$src_dir/sources_1/new"
+# set full_src_tb "$src_dir/sim_1/new"
+# catch {file mkdir $main_project_name}
+# if {[file exists $build_dir]} {
+#     puts "Cleaning build directory: $build_dir"
+#     file delete -force $build_dir
+# }
+# file mkdir $build_dir
+# catch { exec cmd.exe /c robocopy "./" "./$main_project_name" build.tcl run_case.dat } result
+# if {![file exists $tb_top]} {
+# catch {file mkdir $rtl_top}
+# catch {file mkdir $tb_top}
+# catch { exec cmd.exe /c robocopy "$full_src_tb" "$tb_top" /E } result
+# catch { exec cmd.exe /c robocopy "$full_src_rtl" "$rtl_top" /E } result
+# }
+# create_project $proj_name $proj_dir -part $part -force
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_'
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 431.430 ; gain = 97.121
+# foreach f [glob -nocomplain $rtl_glob] {
+#   add_files $f
+# }
+# set_property top $rtl_top_e [current_fileset]
+# update_compile_order -fileset sources_1
+# set tb_list [glob -nocomplain $tb_glob]
+# set run_sim 0
+# if {[llength $tb_list] > 0} {
+#   set run_sim 1
+#   foreach f $tb_list {
+#     add_files -fileset sim_1 $f
+#   }
+#   catch { set_property top $tb_top_e [get_filesets sim_1] }
+#   update_compile_order -fileset sim_1
+# }
+# launch_runs synth_1
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Fri Apr  3 11:59:03 2026] Launched synth_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Fri Apr  3 11:59:03 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log FIR_Filter_meta.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIR_Filter_meta.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source FIR_Filter_meta.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 433.168 ; gain = 98.945
+Command: synth_design -top FIR_Filter_meta -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2744
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 865.961 ; gain = 407.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FIR_Filter_meta' [C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/rtl/FIR_Filter_meta.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Filter_meta' (0#1) [C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/rtl/FIR_Filter_meta.vhd:43]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 958.988 ; gain = 500.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 958.988 ; gain = 500.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 958.988 ; gain = 500.938
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 958.988 ; gain = 500.938
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 29    
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 60    
+	   3 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP ARG, operation Mode is: (A''*(B:0x3ffe6) or 0).
+DSP Report: register delay_line_reg[1] is absorbed into DSP ARG.
+DSP Report: register delay_line_reg[2] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ffe1) or 0).
+DSP Report: register delay_line_reg[3] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ffe3) or 0).
+DSP Report: register delay_line_reg[4] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN''*(B:0x14) or 0).
+DSP Report: register delay_line_reg[5] is absorbed into DSP ARG.
+DSP Report: register delay_line_reg[6] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x52) or 0).
+DSP Report: register delay_line_reg[7] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0xae) or 0).
+DSP Report: register delay_line_reg[8] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x126) or 0).
+DSP Report: register delay_line_reg[9] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x1b5) or 0).
+DSP Report: register delay_line_reg[10] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x24f) or 0).
+DSP Report: register delay_line_reg[11] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x2e5) or 0).
+DSP Report: register delay_line_reg[12] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x369) or 0).
+DSP Report: register delay_line_reg[13] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3cb) or 0).
+DSP Report: register delay_line_reg[14] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ff) or 0).
+DSP Report: register delay_line_reg[15] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ff) or 0).
+DSP Report: register delay_line_reg[16] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3cb) or 0).
+DSP Report: register delay_line_reg[17] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x369) or 0).
+DSP Report: register delay_line_reg[18] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x2e5) or 0).
+DSP Report: register delay_line_reg[19] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x24f) or 0).
+DSP Report: register delay_line_reg[20] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x1b5) or 0).
+DSP Report: register delay_line_reg[21] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x126) or 0).
+DSP Report: register delay_line_reg[22] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0xae) or 0).
+DSP Report: register delay_line_reg[23] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x52) or 0).
+DSP Report: register delay_line_reg[24] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x14) or 0).
+DSP Report: register delay_line_reg[25] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN''*(B:0x3ffe3) or 0).
+DSP Report: register delay_line_reg[26] is absorbed into DSP ARG.
+DSP Report: register delay_line_reg[27] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ffe1) or 0).
+DSP Report: register delay_line_reg[28] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ffe6) or 0).
+DSP Report: register delay_line_reg[29] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (ACIN2*(B:0x3ffec) or 0).
+DSP Report: register delay_line_reg[30] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: A''*(B:0x3ffef).
+DSP Report: register delay_line_reg[30] is absorbed into DSP ARG.
+DSP Report: register delay_line_reg[31] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (A''*(B:0x3ffec) or 0).
+DSP Report: register delay_line_reg[0] is absorbed into DSP ARG.
+DSP Report: register delay_line_reg[1] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: A2*(B:0x3ffef).
+DSP Report: register delay_line_reg[0] is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP final_sum_reg, operation Mode is: (PCIN or 0)+(A:B or 0)+(C or 0).
+DSP Report: register final_sum_reg is absorbed into DSP final_sum_reg.
+DSP Report: operator acc0 is absorbed into DSP final_sum_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1173.395 ; gain = 715.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------+---------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping                     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+---------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Filter_meta | (A''*(B:0x3ffe6) or 0)          | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ffe1) or 0)        | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ffe3) or 0)        | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN''*(B:0x14) or 0)          | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x52) or 0)           | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0xae) or 0)           | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x126) or 0)          | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x1b5) or 0)          | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x24f) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x2e5) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x369) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3cb) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ff) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ff) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3cb) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x369) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x2e5) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x24f) or 0)          | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x1b5) or 0)          | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x126) or 0)          | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0xae) or 0)           | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x52) or 0)           | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x14) or 0)           | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN''*(B:0x3ffe3) or 0)       | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ffe1) or 0)        | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ffe6) or 0)        | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (ACIN2*(B:0x3ffec) or 0)        | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | A''*(B:0x3ffef)                 | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (A''*(B:0x3ffec) or 0)          | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | A2*(B:0x3ffef)                  | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | (PCIN or 0)+(A:B or 0)+(C or 0) | 14     | 18     | 23     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
++----------------+---------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1177.051 ; gain = 719.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|FIR_Filter_meta | delay_line_reg[5][15]  | 5      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|FIR_Filter_meta | delay_line_reg[26][15] | 21     | 16    | YES          | NO                 | YES               | 0      | 16      | 
++----------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 25     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 26     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 27     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 27     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 28     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 27     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 27     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 26     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 25     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | A''*B       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 23     | -    | -    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | A'*B        | 30     | 18     | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter_meta | Dynamic     | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 1    | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   236|
+|3     |DSP48E1 |    31|
+|4     |LUT1    |     3|
+|5     |LUT2    |   288|
+|6     |LUT3    |   884|
+|7     |LUT4    |    22|
+|8     |SRL16E  |    16|
+|9     |SRLC32E |    16|
+|10    |FDRE    |   149|
+|11    |IBUF    |    18|
+|12    |OBUF    |    32|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1696|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1177.195 ; gain = 719.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1189.012 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'FIR_Filter_meta' is not ideal for floorplanning, since the cellview 'FIR_Filter_meta' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1290.672 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b3250194
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1290.672 ; gain = 857.504
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/synth_1/FIR_Filter_meta.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FIR_Filter_meta_utilization_synth.rpt -pb FIR_Filter_meta_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 12:00:17 2026...
+[Fri Apr  3 12:00:24 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:21 . Memory (MB): peak = 456.289 ; gain = 0.000
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 860.070 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'FIR_Filter_meta' is not ideal for floorplanning, since the cellview 'FIR_Filter_meta' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 980.293 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 980.293 ; gain = 524.004
+# write_checkpoint -force [file join $build_dir post_synth.dcp]
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/build/post_synth.dcp' has been generated.
+# launch_runs impl_1
+[Fri Apr  3 12:00:41 2026] Launched impl_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Fri Apr  3 12:00:41 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log FIR_Filter_meta.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source FIR_Filter_meta.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source FIR_Filter_meta.tcl -notrace
+Command: open_checkpoint C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta.dcp
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 860.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'FIR_Filter_meta' is not ideal for floorplanning, since the cellview 'FIR_Filter_meta' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 957.223 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 998636b1
+----- Checksum: PlaceDB: 00000000 ShapeSum: 998636b1 RouteDB: 00000000 
+open_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 961.266 ; gain = 640.840
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1010.566 ; gain = 27.949
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 14cab3845
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1561.301 ; gain = 550.734
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 61 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 161658d40
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.350 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 176fe359f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.398 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 149936f07
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.500 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 149936f07
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.584 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 149936f07
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.593 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 149936f07
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.600 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               2  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: fe77c024
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.854 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: fe77c024
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: fe77c024
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: fe77c024
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1896.852 ; gain = 935.586
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file FIR_Filter_meta_drc_opted.rpt -pb FIR_Filter_meta_drc_opted.pb -rpx FIR_Filter_meta_drc_opted.rpx
+Command: report_drc -file FIR_Filter_meta_drc_opted.rpt -pb FIR_Filter_meta_drc_opted.pb -rpx FIR_Filter_meta_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f15e28f9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: dd019e91
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: e2c2c7ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+WARNING: [Place 46-29] Timing had been disabled during Placer and, therefore, physical synthesis in Placer will be skipped.
+Phase 2.4 Global Placement Core | Checksum: 18b2f2be2
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 18b2f2be2
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 18b2f2be2
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a57567d7
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 15b77c615
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 13d831e02
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 229f337bf
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1896.852 ; gain = 0.000
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1b47c9685
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Ending Placer Task | Checksum: 13da620fe
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.485 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file FIR_Filter_meta_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1896.852 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file FIR_Filter_meta_utilization_placed.rpt -pb FIR_Filter_meta_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file FIR_Filter_meta_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1896.852 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1908.637 ; gain = 11.785
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+49 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.343 . Memory (MB): peak = 1926.516 ; gain = 14.859
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: fd4029ba ConstDB: 0 ShapeSum: 4065f744 RouteDB: 0
+Post Restoration Checksum: NetGraph: f787b1cc NumContArr: 6c2b26f3 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 163b2d8bf
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:47 . Memory (MB): peak = 2032.297 ; gain = 96.617
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 163b2d8bf
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:47 . Memory (MB): peak = 2038.945 ; gain = 103.266
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 163b2d8bf
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:47 . Memory (MB): peak = 2038.945 ; gain = 103.266
+ Number of Nodes with overlaps = 0
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 2931
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 2931
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: a3e94e73
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: a3e94e73
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 2059.289 ; gain = 123.609
+Phase 3 Initial Routing | Checksum: 8f809bfb
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+Phase 4 Rip-up And Reroute | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+Phase 6 Post Hold Fix | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.373149 %
+  Global Horizontal Routing Utilization  = 0.433824 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 40.5405%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 40.5405%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 45.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 39.7059%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 115b3d15b
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1276cee7b
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:49 . Memory (MB): peak = 2059.289 ; gain = 123.609
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+58 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:58 ; elapsed = 00:00:51 . Memory (MB): peak = 2059.289 ; gain = 132.773
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.386 . Memory (MB): peak = 2068.750 ; gain = 9.461
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file FIR_Filter_meta_drc_routed.rpt -pb FIR_Filter_meta_drc_routed.pb -rpx FIR_Filter_meta_drc_routed.rpx
+Command: report_drc -file FIR_Filter_meta_drc_routed.rpt -pb FIR_Filter_meta_drc_routed.pb -rpx FIR_Filter_meta_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file FIR_Filter_meta_methodology_drc_routed.rpt -pb FIR_Filter_meta_methodology_drc_routed.pb -rpx FIR_Filter_meta_methodology_drc_routed.rpx
+Command: report_methodology -file FIR_Filter_meta_methodology_drc_routed.rpt -pb FIR_Filter_meta_methodology_drc_routed.pb -rpx FIR_Filter_meta_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.runs/impl_1/FIR_Filter_meta_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file FIR_Filter_meta_power_routed.rpt -pb FIR_Filter_meta_power_summary_routed.pb -rpx FIR_Filter_meta_power_routed.rpx
+Command: report_power -file FIR_Filter_meta_power_routed.rpt -pb FIR_Filter_meta_power_summary_routed.pb -rpx FIR_Filter_meta_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+69 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file FIR_Filter_meta_route_status.rpt -pb FIR_Filter_meta_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file FIR_Filter_meta_timing_summary_routed.rpt -pb FIR_Filter_meta_timing_summary_routed.pb -rpx FIR_Filter_meta_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file FIR_Filter_meta_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file FIR_Filter_meta_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file FIR_Filter_meta_bus_skew_routed.rpt -pb FIR_Filter_meta_bus_skew_routed.pb -rpx FIR_Filter_meta_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 12:03:00 2026...
+[Fri Apr  3 12:03:07 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:02:27 . Memory (MB): peak = 985.531 ; gain = 0.000
+# open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 985.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'FIR_Filter_meta' is not ideal for floorplanning, since the cellview 'FIR_Filter_meta' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.770 . Memory (MB): peak = 1103.188 ; gain = 24.859
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.775 . Memory (MB): peak = 1103.188 ; gain = 24.859
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1493.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1493.105 ; gain = 507.574
+# report_utilization    -file [file join $build_dir utilization.rpt]
+# report_timing_summary -file [file join $build_dir timing_summary.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1686.465 ; gain = 193.359
+# set sim_log [file join $build_dir sim.log]
+# if {$run_sim} {
+#   launch_simulation -simset sim_1 -mode behavioral
+#   log_wave -recursive *
+#   run all
+#   catch { write_waveform -file [file join $build_dir waveform.wdb] }
+#   if {[file exists "vivado.log"]} {
+#     file copy -force "vivado.log" $sim_log
+#   } else {
+#     # create empty log
+#     set fd [open $sim_log w]; puts $fd "No vivado.log"; close $fd
+#   }
+# } else {
+#   # no sim run
+#   set fd [open $sim_log w]; puts $fd "Simulation not run (no TB)"; close $fd
+# }
+Command: launch_simulation  -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'FIR_Filter_meta_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'FIR_Filter_meta_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj FIR_Filter_meta_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/rtl/FIR_Filter_meta.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FIR_Filter_meta'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FIR_Filter_meta_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FIR_Filter_meta_tb_behav xil_defaultlib.FIR_Filter_meta_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FIR_Filter_meta_tb_behav xil_defaultlib.FIR_Filter_meta_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.FIR_Filter_meta [fir_filter_meta_default]
+Compiling architecture sim of entity xil_defaultlib.fir_filter_meta_tb
+Built simulation snapshot FIR_Filter_meta_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/FIR_Filter_meta_/FIR_Filter_meta_bug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FIR_Filter_meta_tb_behav -key {Behavioral:sim_1:Functional:FIR_Filter_meta_tb} -tclbatch {FIR_Filter_meta_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source FIR_Filter_meta_tb.tcl
+## current_wave_config
+Error: ERROR:METASTABILITY-20000 Actual=0
+Time: 65 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-26000 Actual=-20000
+Time: 75 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-31000 Actual=0
+Time: 85 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-29000 Actual=-26000
+Time: 95 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-15000 Actual=0
+Time: 105 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY20000 Actual=-31000
+Time: 115 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY82000 Actual=0
+Time: 125 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY174000 Actual=-29000
+Time: 135 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY294000 Actual=0
+Time: 145 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY437000 Actual=-15000
+Time: 155 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY591000 Actual=0
+Time: 165 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY741000 Actual=20000
+Time: 175 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY873000 Actual=0
+Time: 185 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY971000 Actual=82000
+Time: 195 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1023000 Actual=0
+Time: 205 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1023000 Actual=174000
+Time: 215 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY971000 Actual=0
+Time: 225 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY873000 Actual=294000
+Time: 235 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY741000 Actual=0
+Time: 245 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY591000 Actual=437000
+Time: 255 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY403000 Actual=0
+Time: 265 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY220000 Actual=557000
+Time: 275 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY48000 Actual=0
+Time: 285 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-106000 Actual=667000
+Time: 295 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-226000 Actual=0
+Time: 305 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-291000 Actual=747000
+Time: 315 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-265000 Actual=0
+Time: 325 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-103000 Actual=783000
+Time: 335 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY250000 Actual=0
+Time: 345 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY844000 Actual=777000
+Time: 355 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1755000 Actual=0
+Time: 365 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY2992300 Actual=779300
+Time: 375 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY4522600 Actual=0
+Time: 385 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6324300 Actual=801900
+Time: 395 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8314900 Actual=0
+Time: 405 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10378600 Actual=909900
+Time: 415 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY12370800 Actual=0
+Time: 425 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14137000 Actual=1172200
+Time: 435 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15531400 Actual=0
+Time: 445 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16439200 Actual=1646500
+Time: 455 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16790400 Actual=0
+Time: 465 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16569300 Actual=2370400
+Time: 475 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15821300 Actual=0
+Time: 485 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14643400 Actual=3343800
+Time: 495 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY13172800 Actual=0
+Time: 505 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11571300 Actual=4526400
+Time: 515 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10002100 Actual=0
+Time: 525 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8611200 Actual=5842600
+Time: 535 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY7509400 Actual=0
+Time: 545 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6768900 Actual=7191600
+Time: 555 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6414500 Actual=0
+Time: 565 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY5911861 Actual=7937361
+Time: 575 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6796716 Actual=0
+Time: 585 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6851479 Actual=8410321
+Time: 595 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8267607 Actual=0
+Time: 605 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8897344 Actual=8444479
+Time: 615 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10883274 Actual=0
+Time: 625 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY12201104 Actual=8038902
+Time: 635 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14895108 Actual=0
+Time: 645 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16850286 Actual=7426259
+Time: 655 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY19963174 Actual=0
+Time: 665 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY22050173 Actual=7041154
+Time: 675 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY24782855 Actual=0
+Time: 685 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY25961732 Actual=7642994
+Time: 695 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY27379058 Actual=0
+Time: 705 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY26799325 Actual=10142588
+Time: 715 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY26209871 Actual=0
+Time: 725 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY23617602 Actual=15587546
+Time: 735 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY21228864 Actual=0
+Time: 745 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY17244965 Actual=24919144
+Time: 755 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14040847 Actual=0
+Time: 765 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY9898074 Actual=38886523
+Time: 775 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6431962 Actual=0
+Time: 785 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY3239123 Actual=58010747
+Time: 795 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1333248 Actual=0
+Time: 805 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-54997 Actual=82500014
+Time: 815 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-717363 Actual=0
+Time: 825 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-409747 Actual=111183623
+Time: 835 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY790471 Actual=0
+Time: 845 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY2807976 Actual=143128961
+Time: 855 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY5532207 Actual=0
+Time: 865 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8491038 Actual=176701937
+Time: 875 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11494054 Actual=0
+Time: 885 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14535247 Actual=209894459
+Time: 895 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15788497 Actual=0
+Time: 905 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16979368 Actual=240561740
+Time: 915 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15920082 Actual=0
+Time: 925 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14590931 Actual=266415829
+Time: 935 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11134457 Actual=0
+Time: 945 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY7961450 Actual=285452562
+Time: 955 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY3456444 Actual=0
+Time: 965 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY152667 Actual=296158293
+Time: 975 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-3534687 Actual=0
+Time: 985 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-5319886 Actual=297599861
+Time: 995 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Note: Simulation completed successfully.
+Time: 1 us  Iteration: 0  Process: /FIR_Filter_meta_tb/line__126  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+$stop called at time : 1 us : File "C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd" Line 184
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FIR_Filter_meta_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1698.691 ; gain = 12.227
+Error: ERROR:METASTABILITY-7076150 Actual=0
+Time: 1005 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-6783980 Actual=289535654
+Time: 1015 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-6627836 Actual=0
+Time: 1025 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-4894166 Actual=272635909
+Time: 1035 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-3913740 Actual=0
+Time: 1045 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-1958801 Actual=248173164
+Time: 1055 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-1340445 Actual=0
+Time: 1065 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-52904 Actual=217995227
+Time: 1075 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-207675 Actual=0
+Time: 1085 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY385468 Actual=184302581
+Time: 1095 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY347232 Actual=0
+Time: 1105 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY629988 Actual=149422869
+Time: 1115 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY225888 Actual=0
+Time: 1125 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY174000 Actual=115487563
+Time: 1135 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY294000 Actual=0
+Time: 1145 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY437000 Actual=84356830
+Time: 1155 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY591000 Actual=0
+Time: 1165 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY741000 Actual=57398263
+Time: 1175 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY873000 Actual=0
+Time: 1185 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY971000 Actual=35367075
+Time: 1195 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1023000 Actual=0
+Time: 1205 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1023000 Actual=19000552
+Time: 1215 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY971000 Actual=0
+Time: 1225 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY873000 Actual=7625062
+Time: 1235 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY741000 Actual=0
+Time: 1245 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY591000 Actual=620636
+Time: 1255 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY403000 Actual=0
+Time: 1265 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY220000 Actual=-2967090
+Time: 1275 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY48000 Actual=0
+Time: 1285 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-106000 Actual=-4106174
+Time: 1295 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-226000 Actual=0
+Time: 1305 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-291000 Actual=-3784661
+Time: 1315 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-265000 Actual=0
+Time: 1325 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-103000 Actual=-2812082
+Time: 1335 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY250000 Actual=0
+Time: 1345 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY844000 Actual=-1728081
+Time: 1355 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1755000 Actual=0
+Time: 1365 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY2992300 Actual=-746231
+Time: 1375 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY4522600 Actual=0
+Time: 1385 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6324300 Actual=22205
+Time: 1395 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8314900 Actual=0
+Time: 1405 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10378600 Actual=702868
+Time: 1415 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY12370800 Actual=0
+Time: 1425 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14137000 Actual=1316088
+Time: 1435 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15531400 Actual=0
+Time: 1445 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16439200 Actual=1646500
+Time: 1455 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16790400 Actual=0
+Time: 1465 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16569300 Actual=2370400
+Time: 1475 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15821300 Actual=0
+Time: 1485 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14643400 Actual=3343800
+Time: 1495 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY13172800 Actual=0
+Time: 1505 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11571300 Actual=4526400
+Time: 1515 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10002100 Actual=0
+Time: 1525 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8611200 Actual=5842600
+Time: 1535 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY7509400 Actual=0
+Time: 1545 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6768900 Actual=7191600
+Time: 1555 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6414500 Actual=0
+Time: 1565 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY5911861 Actual=7937361
+Time: 1575 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6796716 Actual=0
+Time: 1585 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6851479 Actual=8410321
+Time: 1595 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8267607 Actual=0
+Time: 1605 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8897344 Actual=8444479
+Time: 1615 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY10883274 Actual=0
+Time: 1625 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY12201104 Actual=8038902
+Time: 1635 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14895108 Actual=0
+Time: 1645 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16850286 Actual=7426259
+Time: 1655 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY19963174 Actual=0
+Time: 1665 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY22050173 Actual=7041154
+Time: 1675 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY24782855 Actual=0
+Time: 1685 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY25961732 Actual=7642994
+Time: 1695 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY27379058 Actual=0
+Time: 1705 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY26799325 Actual=10142588
+Time: 1715 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY26209871 Actual=0
+Time: 1725 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY23617602 Actual=15587546
+Time: 1735 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY21228864 Actual=0
+Time: 1745 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY17244965 Actual=24919144
+Time: 1755 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14040847 Actual=0
+Time: 1765 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY9898074 Actual=38886523
+Time: 1775 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY6431962 Actual=0
+Time: 1785 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY3239123 Actual=58010747
+Time: 1795 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY1333248 Actual=0
+Time: 1805 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-54997 Actual=82500014
+Time: 1815 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-717363 Actual=0
+Time: 1825 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-409747 Actual=111183623
+Time: 1835 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY790471 Actual=0
+Time: 1845 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY2807976 Actual=143128961
+Time: 1855 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY5532207 Actual=0
+Time: 1865 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY8491038 Actual=176701937
+Time: 1875 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11494054 Actual=0
+Time: 1885 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14535247 Actual=209894459
+Time: 1895 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15788497 Actual=0
+Time: 1905 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY16979368 Actual=240561740
+Time: 1915 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY15920082 Actual=0
+Time: 1925 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY14590931 Actual=266415829
+Time: 1935 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY11134457 Actual=0
+Time: 1945 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY7961450 Actual=285452562
+Time: 1955 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY3456444 Actual=0
+Time: 1965 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY152667 Actual=296158293
+Time: 1975 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-3534687 Actual=0
+Time: 1985 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Error: ERROR:METASTABILITY-5319886 Actual=297599861
+Time: 1995 ns  Iteration: 0  Process: /FIR_Filter_meta_tb/line__191  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+Note: Simulation completed successfully.
+Time: 2 us  Iteration: 0  Process: /FIR_Filter_meta_tb/line__126  File: C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd
+$stop called at time : 2 us : File "C:/Users/narsi/Desktop/projects/Project_BUG/FIR/FIR_Filter_meta/FIR_Filter_meta_D/tb/FIR_Filter_meta_tb.vhd" Line 184

@@ -1,0 +1,28 @@
+{
+  "id": "FIFO_RSEQ_buggy",
+  "module": "FIFO_RSEQ",
+  "category": "sequential_logic",
+  "bug_type": "RESET_SEQUENCE",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\FIFO_RSEQ\\FIFO_RSEQ_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\FIFO_RSEQ\\FIFO_RSEQ_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 27,
+    "ff_used": 32,
+    "worst_slack_ns": null,
+    "assertions_failed": 40,
+    "assert_tags": [
+      "RESET_SEQUENCE"
+    ],
+    "Number_of_Probe": 14,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 30
+  },
+  "notes": "Auto-generated metadata for FIFO_RSEQ."
+}

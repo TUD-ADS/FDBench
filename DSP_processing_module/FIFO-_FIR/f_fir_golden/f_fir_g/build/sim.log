@@ -1,0 +1,1275 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Apr  2 05:37:43 2026
+# Process ID: 18416
+# Current directory: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir
+# Command line: vivado.exe -mode batch -source build.tcl
+# Log file: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/vivado.log
+# Journal file: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir\vivado.jou
+# Running On: Milan, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 6297 MB
+#-----------------------------------------------------------
+source build.tcl
+# set main_project_name "f_fir_g"
+# set proj_name   "f_fir_bug"
+# set proj_dir    "./$main_project_name/f_fir_"
+# set build_dir   "./$main_project_name/build"
+# set part        "xc7z020clg484-1"
+# set rtl_glob    "./$main_project_name/rtl/*.vhd"
+# set tb_glob     "./$main_project_name/tb/*_tb.vhd"
+# set xdc_glob    "./$main_project_name/constraints/*.xdc"
+# set rtl_top_e   "f_fir"
+# set tb_top_e   "f_fir_tb"
+# set rtl_top     "./$main_project_name/rtl"
+# set tb_top      "./$main_project_name/tb"
+# set vivado_tool "Vivado 2022.2"
+# set rtl_dir     "./rtl"
+# set tb_dir      "./tb"
+# set src_dir [glob -type d ./*.srcs]
+# set full_src_rtl "$src_dir/sources_1/new"
+# set full_src_tb "$src_dir/sim_1/new"
+# catch {file mkdir $main_project_name}
+# if {[file exists $build_dir]} {
+#     puts "Cleaning build directory: $build_dir"
+#     file delete -force $build_dir
+# }
+Cleaning build directory: ./f_fir_g/build
+# file mkdir $build_dir
+# catch { exec cmd.exe /c robocopy "./" "./$main_project_name" build.tcl run_case.dat } result
+# if {![file exists $tb_top]} {
+# catch {file mkdir $rtl_top}
+# catch {file mkdir $tb_top}
+# catch { exec cmd.exe /c robocopy "$full_src_tb" "$tb_top" /E } result
+# catch { exec cmd.exe /c robocopy "$full_src_rtl" "$rtl_top" /E } result
+# }
+# create_project $proj_name $proj_dir -part $part -force
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 431.738 ; gain = 105.824
+# foreach f [glob -nocomplain $rtl_glob] {
+#   add_files $f
+# }
+# set_property top $rtl_top_e [current_fileset]
+# update_compile_order -fileset sources_1
+# set tb_list [glob -nocomplain $tb_glob]
+# set run_sim 0
+# if {[llength $tb_list] > 0} {
+#   set run_sim 1
+#   foreach f $tb_list {
+#     add_files -fileset sim_1 $f
+#   }
+#   catch { set_property top $tb_top_e [get_filesets sim_1] }
+#   update_compile_order -fileset sim_1
+# }
+# launch_runs synth_1
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Apr  2 05:38:03 2026] Launched synth_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Thu Apr  2 05:38:03 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log f_fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source f_fir.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source f_fir.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 430.426 ; gain = 98.590
+Command: synth_design -top f_fir -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7184
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 866.789 ; gain = 412.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'f_fir' [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/f_fir.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'fifo' [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/fifo.vhd:54]
+	Parameter f_WIDTH bound to: 16 - type: integer 
+	Parameter f_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo' (0#1) [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/fifo.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'FIR_Filter' [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/FIR_FILTER.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Filter' (0#1) [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/FIR_FILTER.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'f_fir' (0#1) [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/f_fir.vhd:52]
+WARNING: [Synth 8-6014] Unused sequential element data_valid_reg was removed.  [C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/f_fir.vhd:90]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 960.336 ; gain = 506.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 960.336 ; gain = 506.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 960.336 ; gain = 506.051
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 960.336 ; gain = 506.051
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 2     
+	   2 Input   29 Bit       Adders := 4     
+	   2 Input   28 Bit       Adders := 8     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               30 Bit    Registers := 2     
+	               29 Bit    Registers := 4     
+	               28 Bit    Registers := 8     
+	               16 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              512 Bit	(32 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP fir_inst/products_reg[26], operation Mode is: (A''*(B:0x3fff1))'.
+DSP Report: register fir_inst/delay_line_reg[25] is absorbed into DSP fir_inst/products_reg[26].
+DSP Report: register fir_inst/delay_line_reg[26] is absorbed into DSP fir_inst/products_reg[26].
+DSP Report: register fir_inst/products_reg[26] is absorbed into DSP fir_inst/products_reg[26].
+DSP Report: operator fir_inst/products_reg[26]0 is absorbed into DSP fir_inst/products_reg[26].
+DSP Report: Generating DSP fir_inst/s1_reg[13], operation Mode is: (PCIN+(A''*(B:0x3ffe3))')'.
+DSP Report: register fir_inst/delay_line_reg[26] is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: register fir_inst/delay_line_reg[27] is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: register fir_inst/s1_reg[13] is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: register fir_inst/products_reg[27] is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: operator fir_inst/products_reg[27]0 is absorbed into DSP fir_inst/s1_reg[13].
+DSP Report: Generating DSP fir_inst/products_reg[28], operation Mode is: (ACIN''*(B:0x3ffe1))'.
+DSP Report: register fir_inst/delay_line_reg[27] is absorbed into DSP fir_inst/products_reg[28].
+DSP Report: register fir_inst/delay_line_reg[28] is absorbed into DSP fir_inst/products_reg[28].
+DSP Report: register fir_inst/products_reg[28] is absorbed into DSP fir_inst/products_reg[28].
+DSP Report: operator fir_inst/products_reg[28]0 is absorbed into DSP fir_inst/products_reg[28].
+DSP Report: Generating DSP fir_inst/s1_reg[14], operation Mode is: (PCIN+(A''*(B:0x3ffe6))')'.
+DSP Report: register fir_inst/delay_line_reg[28] is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: register fir_inst/delay_line_reg[29] is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: register fir_inst/s1_reg[14] is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: register fir_inst/products_reg[29] is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: operator fir_inst/products_reg[29]0 is absorbed into DSP fir_inst/s1_reg[14].
+DSP Report: Generating DSP fir_inst/products_reg[30], operation Mode is: (A''*(B:0x3ffec))'.
+DSP Report: register fir_inst/delay_line_reg[29] is absorbed into DSP fir_inst/products_reg[30].
+DSP Report: register fir_inst/delay_line_reg[30] is absorbed into DSP fir_inst/products_reg[30].
+DSP Report: register fir_inst/products_reg[30] is absorbed into DSP fir_inst/products_reg[30].
+DSP Report: operator fir_inst/products_reg[30]0 is absorbed into DSP fir_inst/products_reg[30].
+DSP Report: Generating DSP fir_inst/s1_reg[15], operation Mode is: (PCIN+(ACIN2*(B:0x3ffef))')'.
+DSP Report: register fir_inst/delay_line_reg[31] is absorbed into DSP fir_inst/s1_reg[15].
+DSP Report: register fir_inst/s1_reg[15] is absorbed into DSP fir_inst/s1_reg[15].
+DSP Report: register fir_inst/products_reg[31] is absorbed into DSP fir_inst/s1_reg[15].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[15].
+DSP Report: operator fir_inst/products_reg[31]0 is absorbed into DSP fir_inst/s1_reg[15].
+DSP Report: Generating DSP fir_inst/s2_reg[7], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[7] is absorbed into DSP fir_inst/s2_reg[7].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[7].
+DSP Report: Generating DSP fir_inst/products_reg[24], operation Mode is: (A''*(B:0x52))'.
+DSP Report: register fir_inst/delay_line_reg[23] is absorbed into DSP fir_inst/products_reg[24].
+DSP Report: register fir_inst/delay_line_reg[24] is absorbed into DSP fir_inst/products_reg[24].
+DSP Report: register fir_inst/products_reg[24] is absorbed into DSP fir_inst/products_reg[24].
+DSP Report: operator fir_inst/products_reg[24]0 is absorbed into DSP fir_inst/products_reg[24].
+DSP Report: Generating DSP fir_inst/s1_reg[12], operation Mode is: (PCIN+(A''*(B:0x14))')'.
+DSP Report: register fir_inst/delay_line_reg[24] is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: register fir_inst/delay_line_reg[25] is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: register fir_inst/s1_reg[12] is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: register fir_inst/products_reg[25] is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: operator fir_inst/products_reg[25]0 is absorbed into DSP fir_inst/s1_reg[12].
+DSP Report: Generating DSP fir_inst/s2_reg[6], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[6] is absorbed into DSP fir_inst/s2_reg[6].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[6].
+DSP Report: Generating DSP fir_inst/products_reg[10], operation Mode is: (A''*(B:0x1b5))'.
+DSP Report: register fir_inst/delay_line_reg[9] is absorbed into DSP fir_inst/products_reg[10].
+DSP Report: register fir_inst/delay_line_reg[10] is absorbed into DSP fir_inst/products_reg[10].
+DSP Report: register fir_inst/products_reg[10] is absorbed into DSP fir_inst/products_reg[10].
+DSP Report: operator fir_inst/products_reg[10]0 is absorbed into DSP fir_inst/products_reg[10].
+DSP Report: Generating DSP fir_inst/s1_reg[5], operation Mode is: (PCIN+(A''*(B:0x24f))')'.
+DSP Report: register fir_inst/delay_line_reg[10] is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: register fir_inst/delay_line_reg[11] is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: register fir_inst/s1_reg[5] is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: register fir_inst/products_reg[11] is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: operator fir_inst/products_reg[11]0 is absorbed into DSP fir_inst/s1_reg[5].
+DSP Report: Generating DSP fir_inst/products_reg[12], operation Mode is: (ACIN''*(B:0x2e5))'.
+DSP Report: register fir_inst/delay_line_reg[11] is absorbed into DSP fir_inst/products_reg[12].
+DSP Report: register fir_inst/delay_line_reg[12] is absorbed into DSP fir_inst/products_reg[12].
+DSP Report: register fir_inst/products_reg[12] is absorbed into DSP fir_inst/products_reg[12].
+DSP Report: operator fir_inst/products_reg[12]0 is absorbed into DSP fir_inst/products_reg[12].
+DSP Report: Generating DSP fir_inst/s1_reg[6], operation Mode is: (PCIN+(A''*(B:0x369))')'.
+DSP Report: register fir_inst/delay_line_reg[12] is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: register fir_inst/delay_line_reg[13] is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: register fir_inst/s1_reg[6] is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: register fir_inst/products_reg[13] is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: operator fir_inst/products_reg[13]0 is absorbed into DSP fir_inst/s1_reg[6].
+DSP Report: Generating DSP fir_inst/products_reg[14], operation Mode is: (ACIN''*(B:0x3cb))'.
+DSP Report: register fir_inst/delay_line_reg[13] is absorbed into DSP fir_inst/products_reg[14].
+DSP Report: register fir_inst/delay_line_reg[14] is absorbed into DSP fir_inst/products_reg[14].
+DSP Report: register fir_inst/products_reg[14] is absorbed into DSP fir_inst/products_reg[14].
+DSP Report: operator fir_inst/products_reg[14]0 is absorbed into DSP fir_inst/products_reg[14].
+DSP Report: Generating DSP fir_inst/s1_reg[7], operation Mode is: (PCIN+(A''*(B:0x3ff))')'.
+DSP Report: register fir_inst/delay_line_reg[14] is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: register fir_inst/delay_line_reg[15] is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: register fir_inst/s1_reg[7] is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: register fir_inst/products_reg[15] is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: operator fir_inst/products_reg[15]0 is absorbed into DSP fir_inst/s1_reg[7].
+DSP Report: Generating DSP fir_inst/products_reg[16], operation Mode is: (ACIN''*(B:0x3ff))'.
+DSP Report: register fir_inst/delay_line_reg[15] is absorbed into DSP fir_inst/products_reg[16].
+DSP Report: register fir_inst/delay_line_reg[16] is absorbed into DSP fir_inst/products_reg[16].
+DSP Report: register fir_inst/products_reg[16] is absorbed into DSP fir_inst/products_reg[16].
+DSP Report: operator fir_inst/products_reg[16]0 is absorbed into DSP fir_inst/products_reg[16].
+DSP Report: Generating DSP fir_inst/s1_reg[8], operation Mode is: (PCIN+(A''*(B:0x3cb))')'.
+DSP Report: register fir_inst/delay_line_reg[16] is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: register fir_inst/delay_line_reg[17] is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: register fir_inst/s1_reg[8] is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: register fir_inst/products_reg[17] is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: operator fir_inst/products_reg[17]0 is absorbed into DSP fir_inst/s1_reg[8].
+DSP Report: Generating DSP fir_inst/products_reg[18], operation Mode is: (ACIN''*(B:0x369))'.
+DSP Report: register fir_inst/delay_line_reg[17] is absorbed into DSP fir_inst/products_reg[18].
+DSP Report: register fir_inst/delay_line_reg[18] is absorbed into DSP fir_inst/products_reg[18].
+DSP Report: register fir_inst/products_reg[18] is absorbed into DSP fir_inst/products_reg[18].
+DSP Report: operator fir_inst/products_reg[18]0 is absorbed into DSP fir_inst/products_reg[18].
+DSP Report: Generating DSP fir_inst/s1_reg[9], operation Mode is: (PCIN+(A''*(B:0x2e5))')'.
+DSP Report: register fir_inst/delay_line_reg[18] is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: register fir_inst/delay_line_reg[19] is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: register fir_inst/s1_reg[9] is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: register fir_inst/products_reg[19] is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: operator fir_inst/products_reg[19]0 is absorbed into DSP fir_inst/s1_reg[9].
+DSP Report: Generating DSP fir_inst/products_reg[20], operation Mode is: (ACIN''*(B:0x24f))'.
+DSP Report: register fir_inst/delay_line_reg[19] is absorbed into DSP fir_inst/products_reg[20].
+DSP Report: register fir_inst/delay_line_reg[20] is absorbed into DSP fir_inst/products_reg[20].
+DSP Report: register fir_inst/products_reg[20] is absorbed into DSP fir_inst/products_reg[20].
+DSP Report: operator fir_inst/products_reg[20]0 is absorbed into DSP fir_inst/products_reg[20].
+DSP Report: Generating DSP fir_inst/s1_reg[10], operation Mode is: (PCIN+(ACIN2*(B:0x1b5))')'.
+DSP Report: register fir_inst/delay_line_reg[21] is absorbed into DSP fir_inst/s1_reg[10].
+DSP Report: register fir_inst/s1_reg[10] is absorbed into DSP fir_inst/s1_reg[10].
+DSP Report: register fir_inst/products_reg[21] is absorbed into DSP fir_inst/s1_reg[10].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[10].
+DSP Report: operator fir_inst/products_reg[21]0 is absorbed into DSP fir_inst/s1_reg[10].
+DSP Report: Generating DSP fir_inst/products_reg[22], operation Mode is: (ACIN2*(B:0x126))'.
+DSP Report: register fir_inst/delay_line_reg[22] is absorbed into DSP fir_inst/products_reg[22].
+DSP Report: register fir_inst/products_reg[22] is absorbed into DSP fir_inst/products_reg[22].
+DSP Report: operator fir_inst/products_reg[22]0 is absorbed into DSP fir_inst/products_reg[22].
+DSP Report: Generating DSP fir_inst/s1_reg[11], operation Mode is: (PCIN+(A''*(B:0xae))')'.
+DSP Report: register fir_inst/delay_line_reg[22] is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: register fir_inst/delay_line_reg[23] is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: register fir_inst/s1_reg[11] is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: register fir_inst/products_reg[23] is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: operator fir_inst/products_reg[23]0 is absorbed into DSP fir_inst/s1_reg[11].
+DSP Report: Generating DSP fir_inst/s2_reg[5], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[5] is absorbed into DSP fir_inst/s2_reg[5].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[5].
+DSP Report: Generating DSP fir_inst/products_reg[6], operation Mode is: (A''*(B:0x14))'.
+DSP Report: register fir_inst/delay_line_reg[5] is absorbed into DSP fir_inst/products_reg[6].
+DSP Report: register fir_inst/delay_line_reg[6] is absorbed into DSP fir_inst/products_reg[6].
+DSP Report: register fir_inst/products_reg[6] is absorbed into DSP fir_inst/products_reg[6].
+DSP Report: operator fir_inst/products_reg[6]0 is absorbed into DSP fir_inst/products_reg[6].
+DSP Report: Generating DSP fir_inst/s1_reg[3], operation Mode is: (PCIN+(A''*(B:0x52))')'.
+DSP Report: register fir_inst/delay_line_reg[6] is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: register fir_inst/delay_line_reg[7] is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: register fir_inst/s1_reg[3] is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: register fir_inst/products_reg[7] is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: operator fir_inst/products_reg[7]0 is absorbed into DSP fir_inst/s1_reg[3].
+DSP Report: Generating DSP fir_inst/products_reg[8], operation Mode is: (ACIN''*(B:0xae))'.
+DSP Report: register fir_inst/delay_line_reg[7] is absorbed into DSP fir_inst/products_reg[8].
+DSP Report: register fir_inst/delay_line_reg[8] is absorbed into DSP fir_inst/products_reg[8].
+DSP Report: register fir_inst/products_reg[8] is absorbed into DSP fir_inst/products_reg[8].
+DSP Report: operator fir_inst/products_reg[8]0 is absorbed into DSP fir_inst/products_reg[8].
+DSP Report: Generating DSP fir_inst/s1_reg[4], operation Mode is: (PCIN+(A''*(B:0x126))')'.
+DSP Report: register fir_inst/delay_line_reg[8] is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: register fir_inst/delay_line_reg[9] is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: register fir_inst/s1_reg[4] is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: register fir_inst/products_reg[9] is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: operator fir_inst/products_reg[9]0 is absorbed into DSP fir_inst/s1_reg[4].
+DSP Report: Generating DSP fir_inst/s2_reg[2], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[2] is absorbed into DSP fir_inst/s2_reg[2].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[2].
+DSP Report: Generating DSP fir_inst/products_reg[2], operation Mode is: (A''*(B:0x3ffe6))'.
+DSP Report: register fir_inst/delay_line_reg[1] is absorbed into DSP fir_inst/products_reg[2].
+DSP Report: register fir_inst/delay_line_reg[2] is absorbed into DSP fir_inst/products_reg[2].
+DSP Report: register fir_inst/products_reg[2] is absorbed into DSP fir_inst/products_reg[2].
+DSP Report: operator fir_inst/products_reg[2]0 is absorbed into DSP fir_inst/products_reg[2].
+DSP Report: Generating DSP fir_inst/s1_reg[1], operation Mode is: (PCIN+(A''*(B:0x3ffe1))')'.
+DSP Report: register fir_inst/delay_line_reg[2] is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: register fir_inst/delay_line_reg[3] is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: register fir_inst/s1_reg[1] is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: register fir_inst/products_reg[3] is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: operator fir_inst/products_reg[3]0 is absorbed into DSP fir_inst/s1_reg[1].
+DSP Report: Generating DSP fir_inst/products_reg[4], operation Mode is: (ACIN''*(B:0x3ffe3))'.
+DSP Report: register fir_inst/delay_line_reg[3] is absorbed into DSP fir_inst/products_reg[4].
+DSP Report: register fir_inst/delay_line_reg[4] is absorbed into DSP fir_inst/products_reg[4].
+DSP Report: register fir_inst/products_reg[4] is absorbed into DSP fir_inst/products_reg[4].
+DSP Report: operator fir_inst/products_reg[4]0 is absorbed into DSP fir_inst/products_reg[4].
+DSP Report: Generating DSP fir_inst/s1_reg[2], operation Mode is: (PCIN+(A''*(B:0x3fff1))')'.
+DSP Report: register fir_inst/delay_line_reg[4] is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: register fir_inst/delay_line_reg[5] is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: register fir_inst/s1_reg[2] is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: register fir_inst/products_reg[5] is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: operator fir_inst/products_reg[5]0 is absorbed into DSP fir_inst/s1_reg[2].
+DSP Report: Generating DSP fir_inst/s2_reg[1], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[1] is absorbed into DSP fir_inst/s2_reg[1].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[1].
+DSP Report: Generating DSP fir_inst/products_reg[0], operation Mode is: (A''*(B:0x3ffef))'.
+DSP Report: register fir_data_in_reg is absorbed into DSP fir_inst/products_reg[0].
+DSP Report: register fir_inst/delay_line_reg[0] is absorbed into DSP fir_inst/products_reg[0].
+DSP Report: register fir_inst/products_reg[0] is absorbed into DSP fir_inst/products_reg[0].
+DSP Report: operator fir_inst/products_reg[0]0 is absorbed into DSP fir_inst/products_reg[0].
+DSP Report: Generating DSP fir_inst/s1_reg[0], operation Mode is: (PCIN+(A''*(B:0x3ffec))')'.
+DSP Report: register fir_inst/delay_line_reg[0] is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: register fir_inst/delay_line_reg[1] is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: register fir_inst/s1_reg[0] is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: register fir_inst/products_reg[1] is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: operator fir_inst/products_reg[1]0 is absorbed into DSP fir_inst/s1_reg[0].
+DSP Report: Generating DSP fir_inst/s2_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register fir_inst/s2_reg[0] is absorbed into DSP fir_inst/s2_reg[0].
+DSP Report: operator fir_inst/ARG is absorbed into DSP fir_inst/s2_reg[0].
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------------------+-----------+----------------------+-------------+
+|f_fir       | fifo_inst/r_fifo_data_reg | Implied   | 32 x 16              | RAM32M x 3  | 
++------------+---------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Filter  | (A''*(B:0x3fff1))'           | 16     | 5      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3ffe3))')'   | 16     | 6      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x3ffe1))'        | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3ffe6))')'   | 16     | 6      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*(B:0x3ffec))'           | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(ACIN2*(B:0x3ffef))')' | 16     | 6      | -      | -      | 27     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*(B:0x52))'              | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x14))')'      | 16     | 6      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*(B:0x1b5))'             | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x24f))')'     | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x2e5))'          | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x369))')'     | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x3cb))'          | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3ff))')'     | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x3ff))'          | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3cb))')'     | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x369))'          | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x2e5))')'     | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x24f))'          | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(ACIN2*(B:0x1b5))')'   | 16     | 10     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN2*(B:0x126))'           | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0xae))')'      | 16     | 9      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*(B:0x14))'              | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x52))')'      | 16     | 8      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0xae))'           | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x126))')'     | 16     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*(B:0x3ffe6))'           | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3ffe1))')'   | 16     | 6      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (ACIN''*(B:0x3ffe3))'        | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3fff1))')'   | 16     | 5      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|f_fir       | (A''*(B:0x3ffef))'           | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|FIR_Filter  | (PCIN+(A''*(B:0x3ffec))')'   | 16     | 6      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'                  | 9      | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------------------+-----------+----------------------+-------------+
+|f_fir       | fifo_inst/r_fifo_data_reg | Implied   | 32 x 16              | RAM32M x 3  | 
++------------+---------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|f_fir       | fir_inst/delay_line_reg[21][15] | 4      | 16    | YES          | NO                 | YES               | 16     | 0       | 
++------------+---------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Filter  | (A''*B)'         | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 18     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A'*B)')'  | 0      | 18     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*B)'         | 30     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 5      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*B)'         | 30     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A'*B)')'  | 0      | 9      | -      | -      | 27     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A'*B)'          | 0      | 9      | -      | -      | 0      | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*B)'         | 30     | 5      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 7      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (A''*B)'         | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 18     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|FIR_Filter  | (A''*B)'         | 0      | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|f_fir       | (A''*B)'         | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Filter  | (PCIN+(A''*B)')' | 0      | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|f_fir       | (PCIN+A:B)'      | 30     | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    70|
+|3     |DSP48E1 |    38|
+|4     |LUT1    |    12|
+|5     |LUT2    |   273|
+|6     |LUT3    |     2|
+|7     |LUT4    |     5|
+|8     |LUT5    |     5|
+|9     |LUT6    |    11|
+|10    |MUXF7   |     2|
+|11    |RAM32M  |     3|
+|12    |SRL16E  |    16|
+|13    |FDRE    |   747|
+|14    |IBUF    |    19|
+|15    |OBUF    |    34|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------+-----------+------+
+|      |Instance    |Module     |Cells |
++------+------------+-----------+------+
+|1     |top         |           |  1238|
+|2     |  fifo_inst |fifo       |    66|
+|3     |  fir_inst  |FIR_Filter |  1101|
++------+------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1184.344 ; gain = 730.059
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1193.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'f_fir' is not ideal for floorplanning, since the cellview 'FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1291.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+
+Synth Design complete, checksum: bfa91645
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1291.398 ; gain = 860.973
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/synth_1/f_fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file f_fir_utilization_synth.rpt -pb f_fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 05:39:05 2026...
+[Thu Apr  2 05:39:09 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:06 . Memory (MB): peak = 456.602 ; gain = 0.000
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 861.691 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'f_fir' is not ideal for floorplanning, since the cellview 'FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 980.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 980.930 ; gain = 524.328
+# write_checkpoint -force [file join $build_dir post_synth.dcp]
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/build/post_synth.dcp' has been generated.
+# launch_runs impl_1
+[Thu Apr  2 05:39:22 2026] Launched impl_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Thu Apr  2 05:39:22 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log f_fir.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source f_fir.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source f_fir.tcl -notrace
+Command: open_checkpoint C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir.dcp
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 859.957 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'f_fir' is not ideal for floorplanning, since the cellview 'FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 955.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: e255b77e
+----- Checksum: PlaceDB: 00000000 ShapeSum: e255b77e RouteDB: 00000000 
+open_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 959.336 ; gain = 640.211
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1009.336 ; gain = 27.977
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1a1fecdc3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1547.316 ; gain = 537.980
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1a1fecdc3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a1fecdc3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: f6804894
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.284 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: f6804894
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.351 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: f6804894
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 128e781df
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.368 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               1  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: c1bd9db5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.443 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: c1bd9db5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: c1bd9db5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: c1bd9db5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1891.125 ; gain = 931.789
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file f_fir_drc_opted.rpt -pb f_fir_drc_opted.pb -rpx f_fir_drc_opted.rpx
+Command: report_drc -file f_fir_drc_opted.rpt -pb f_fir_drc_opted.pb -rpx f_fir_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7d789abf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 156bf0ffb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1d89e716c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+WARNING: [Place 46-29] Timing had been disabled during Placer and, therefore, physical synthesis in Placer will be skipped.
+Phase 2.4 Global Placement Core | Checksum: 1af776d6d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1af776d6d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1af776d6d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f0df8772
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1e391d8c3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1fe1270d0
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 19660cd24
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 19660cd24
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1e1f2d20e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1891.125 ; gain = 0.000
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1bf7a090b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Ending Placer Task | Checksum: e250eae3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.327 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file f_fir_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1891.125 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file f_fir_utilization_placed.rpt -pb f_fir_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file f_fir_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1891.125 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1900.129 ; gain = 9.004
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+49 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.280 . Memory (MB): peak = 1917.957 ; gain = 14.895
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 828e0171 ConstDB: 0 ShapeSum: 5fc2e972 RouteDB: 0
+Post Restoration Checksum: NetGraph: 1ff02c8c NumContArr: 702cd904 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 901d0590
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2019.445 ; gain = 92.355
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 901d0590
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2026.047 ; gain = 98.957
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 901d0590
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2026.047 ; gain = 98.957
+ Number of Nodes with overlaps = 0
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 2843
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 2843
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 152c5bb4c
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 152c5bb4c
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+Phase 3 Initial Routing | Checksum: 776e9397
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+Phase 4 Rip-up And Reroute | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+Phase 6 Post Hold Fix | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.303407 %
+  Global Horizontal Routing Utilization  = 0.504141 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 49.5495%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 40.5405%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 35.2941%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 47.0588%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 4c4ff6e5
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: dd1d9011
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 2045.777 ; gain = 118.688
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+58 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:38 . Memory (MB): peak = 2045.777 ; gain = 127.820
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.278 . Memory (MB): peak = 2057.223 ; gain = 11.445
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file f_fir_drc_routed.rpt -pb f_fir_drc_routed.pb -rpx f_fir_drc_routed.rpx
+Command: report_drc -file f_fir_drc_routed.rpt -pb f_fir_drc_routed.pb -rpx f_fir_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file f_fir_methodology_drc_routed.rpt -pb f_fir_methodology_drc_routed.pb -rpx f_fir_methodology_drc_routed.rpx
+Command: report_methodology -file f_fir_methodology_drc_routed.rpt -pb f_fir_methodology_drc_routed.pb -rpx f_fir_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.runs/impl_1/f_fir_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file f_fir_power_routed.rpt -pb f_fir_power_summary_routed.pb -rpx f_fir_power_routed.rpx
+Command: report_power -file f_fir_power_routed.rpt -pb f_fir_power_summary_routed.pb -rpx f_fir_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+69 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file f_fir_route_status.rpt -pb f_fir_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file f_fir_timing_summary_routed.rpt -pb f_fir_timing_summary_routed.pb -rpx f_fir_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file f_fir_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file f_fir_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file f_fir_bus_skew_routed.rpt -pb f_fir_bus_skew_routed.pb -rpx f_fir_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 05:41:17 2026...
+[Thu Apr  2 05:41:24 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:02:01 . Memory (MB): peak = 985.223 ; gain = 0.000
+# open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 986.012 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'f_fir' is not ideal for floorplanning, since the cellview 'FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.563 . Memory (MB): peak = 1103.254 ; gain = 24.871
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.565 . Memory (MB): peak = 1103.254 ; gain = 24.871
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1492.676 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+
+# report_utilization    -file [file join $build_dir utilization.rpt]
+# report_timing_summary -file [file join $build_dir timing_summary.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1673.938 ; gain = 181.262
+# set sim_log [file join $build_dir sim.log]
+# if {$run_sim} {
+#   launch_simulation -simset sim_1 -mode behavioral
+#   log_wave -recursive *
+#   run all
+#   catch { write_waveform -file [file join $build_dir waveform.wdb] }
+#   if {[file exists "vivado.log"]} {
+#     file copy -force "vivado.log" $sim_log
+#   } else {
+#     # create empty log
+#     set fd [open $sim_log w]; puts $fd "No vivado.log"; close $fd
+#   }
+# } else {
+#   # no sim run
+#   set fd [open $sim_log w]; puts $fd "Simulation not run (no TB)"; close $fd
+# }
+Command: launch_simulation  -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'f_fir_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'f_fir_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj f_fir_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/FIR_FILTER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FIR_Filter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/rtl/f_fir.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'f_fir'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/tb/f_fir_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'f_fir_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_fir_tb_behav xil_defaultlib.f_fir_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_fir_tb_behav xil_defaultlib.f_fir_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.fifo [fifo_default]
+Compiling architecture behavioral of entity xil_defaultlib.FIR_Filter [fir_filter_default]
+Compiling architecture behavioral of entity xil_defaultlib.f_fir [f_fir_default]
+Compiling architecture behavioral of entity xil_defaultlib.f_fir_tb
+Built simulation snapshot f_fir_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/f_fir_/f_fir_bug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "f_fir_tb_behav -key {Behavioral:sim_1:Functional:f_fir_tb} -tclbatch {f_fir_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source f_fir_tb.tcl
+## current_wave_config
+Note: Simulation completed successfully.
+Time: 575 ns  Iteration: 0  Process: /f_fir_tb/stimulus  File: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/tb/f_fir_tb.vhd
+$stop called at time : 575 ns : File "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/tb/f_fir_tb.vhd" Line 162
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'f_fir_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1686.176 ; gain = 12.238
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Note: Simulation completed successfully.
+Time: 1145 ns  Iteration: 0  Process: /f_fir_tb/stimulus  File: C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/tb/f_fir_tb.vhd
+$stop called at time : 1145 ns : File "C:/Users/narsi/Desktop/projects/Project_BUG/f_fir/f_fir_g/tb/f_fir_tb.vhd" Line 162

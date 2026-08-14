@@ -1,0 +1,26 @@
+{
+  "id": "UART_TX_golden",
+  "module": "UART_TX",
+  "category": "uart",
+  "bug_type": "None",
+  "status": "Pass",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "",
+    "timing": ""
+  },
+  "results": {
+    "lut_used": null,
+    "ff_used": null,
+    "worst_slack_ns": null,
+    "assertions_failed": 0,
+    "assert_tags": [],
+    "Number_of_Probe": 0,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 0
+  },
+  "notes": "Auto-generated metadata for UART_TX."
+}

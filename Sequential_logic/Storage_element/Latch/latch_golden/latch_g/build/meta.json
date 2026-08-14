@@ -1,0 +1,26 @@
+{
+  "id": "latch_golden",
+  "module": "latch",
+  "category": "sequential_logic",
+  "bug_type": "None",
+  "status": "Pass",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\latch\\latch_g\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\latch\\latch_g\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 1,
+    "ff_used": 0,
+    "worst_slack_ns": null,
+    "assertions_failed": 0,
+    "assert_tags": [],
+    "Number_of_Probe": 0,
+    "Capture_Depth": 0,
+    "Trigger_Window": 0,
+    "Buffer_Size": 0,
+    "Probe_ERROR": 0
+  },
+  "notes": "Auto-generated metadata for latch."
+}

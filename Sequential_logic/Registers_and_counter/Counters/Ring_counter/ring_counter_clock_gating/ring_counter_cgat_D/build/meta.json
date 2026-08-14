@@ -1,0 +1,28 @@
+{
+  "id": "ring_counter_cgat_buggy",
+  "module": "ring_counter_cgat",
+  "category": "sequential_logic",
+  "bug_type": "CLOCK_GATTING",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\ring_counter\\ring_counter_cgat\\ring_counter_cgat_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\ring_counter\\ring_counter_cgat\\ring_counter_cgat_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 1,
+    "ff_used": 4,
+    "worst_slack_ns": null,
+    "assertions_failed": 3,
+    "assert_tags": [
+      "CLOCK_GATTING"
+    ],
+    "Number_of_Probe": 5,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 3
+  },
+  "notes": "Auto-generated metadata for ring_counter_cgat."
+}

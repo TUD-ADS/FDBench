@@ -1,0 +1,28 @@
+{
+  "id": "UART_RX_wfsm_buggy",
+  "module": "UART_RX_wfsm",
+  "category": "control_logic",
+  "bug_type": "WRONG_TRANSITION_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\UART_RX\\UART_RX_wfsm\\UART_RX_wfsm_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\UART_RX\\UART_RX_wfsm\\UART_RX_wfsm_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 0,
+    "ff_used": 0,
+    "worst_slack_ns": null,
+    "assertions_failed": 18,
+    "assert_tags": [
+      "WRONG_TRANSITION_BUG"
+    ],
+    "Number_of_Probe": 7,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 5
+  },
+  "notes": "Auto-generated metadata for UART_RX_wfsm."
+}

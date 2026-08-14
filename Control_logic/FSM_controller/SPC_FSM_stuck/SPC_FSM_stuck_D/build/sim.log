@@ -1,0 +1,1026 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Apr  3 02:05:14 2026
+# Process ID: 3496
+# Current directory: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck
+# Command line: vivado.exe -mode batch -source build.tcl
+# Log file: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/vivado.log
+# Journal file: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck\vivado.jou
+# Running On: Milan, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 6297 MB
+#-----------------------------------------------------------
+source build.tcl
+# set main_project_name "SPC_FSM_stuck_D"
+# set proj_name   "SPC_FSM_stuck_bug"
+# set proj_dir    "./$main_project_name/SPC_FSM_stuck_g_"
+# set build_dir   "./$main_project_name/build"
+# set part        "xc7z020clg484-1"
+# set rtl_glob    "./$main_project_name/rtl/*.vhd"
+# set tb_glob     "./$main_project_name/tb/*_tb.vhd"
+# set xdc_glob    "./constraints/*.xdc"
+# set rtl_top_e   "SPC_FSM_stuck"
+# set tb_top_e   "SPC_FSM_stuck_tb"
+# set rtl_top     "./$main_project_name/rtl"
+# set tb_top      "./$main_project_name/tb"
+# set vivado_tool "Vivado 2022.2"
+# set rtl_dir     "./rtl"
+# set tb_dir      "./tb"
+# set src_dir [glob -type d ./*.srcs]
+# set full_src_rtl "$src_dir/sources_1/new"
+# set full_src_tb "$src_dir/sim_1/new"
+# catch {file mkdir $main_project_name}
+# if {[file exists $build_dir]} {
+#     puts "Cleaning build directory: $build_dir"
+#     file delete -force $build_dir
+# }
+# file mkdir $build_dir
+# catch { exec cmd.exe /c robocopy "./" "./$main_project_name" build.tcl run_case.dat } result
+# if {![file exists $tb_top]} {
+# catch {file mkdir $rtl_top}
+# catch {file mkdir $tb_top}
+# catch { exec cmd.exe /c robocopy "$full_src_tb" "$tb_top" /E } result
+# catch { exec cmd.exe /c robocopy "$full_src_rtl" "$rtl_top" /E } result
+# }
+# create_project $proj_name $proj_dir -part $part -force
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_'
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 433.660 ; gain = 99.387
+# foreach f [glob -nocomplain $rtl_glob] {
+#   add_files $f
+# }
+# set_property top $rtl_top_e [current_fileset]
+# update_compile_order -fileset sources_1
+# set tb_list [glob -nocomplain $tb_glob]
+# set run_sim 0
+# if {[llength $tb_list] > 0} {
+#   set run_sim 1
+#   foreach f $tb_list {
+#     add_files -fileset sim_1 $f
+#   }
+#   catch { set_property top $tb_top_e [get_filesets sim_1] }
+#   update_compile_order -fileset sim_1
+# }
+# launch_runs synth_1
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Fri Apr  3 02:05:39 2026] Launched synth_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Fri Apr  3 02:05:39 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log SPC_FSM_stuck.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SPC_FSM_stuck.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source SPC_FSM_stuck.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 431.840 ; gain = 99.000
+Command: synth_design -top SPC_FSM_stuck -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25060
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 866.043 ; gain = 409.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SPC_FSM_stuck' [C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/rtl/SPC_FSM_stuck.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'SPC_FSM_stuck' (0#1) [C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/rtl/SPC_FSM_stuck.vhd:48]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 955.098 ; gain = 498.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.098 ; gain = 498.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.098 ; gain = 498.375
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'SPC_FSM_stuck'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                send_ack |                               01 |                               01
+                transfer |                               10 |                               10
+                complete |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'sequential' in module 'SPC_FSM_stuck'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 957.031 ; gain = 500.309
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1171.895 ; gain = 715.172
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1172.785 ; gain = 716.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     4|
+|3     |LUT3 |     8|
+|4     |LUT4 |     1|
+|5     |FDCE |     2|
+|6     |IBUF |    12|
+|7     |OBUF |    11|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    39|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1172.957 ; gain = 716.234
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1185.766 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.547 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 280370d2
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 1285.547 ; gain = 853.707
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/synth_1/SPC_FSM_stuck.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SPC_FSM_stuck_utilization_synth.rpt -pb SPC_FSM_stuck_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 02:06:48 2026...
+[Fri Apr  3 02:06:55 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:16 . Memory (MB): peak = 458.527 ; gain = 0.000
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 860.043 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 976.457 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 981.434 ; gain = 522.906
+# write_checkpoint -force [file join $build_dir post_synth.dcp]
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/build/post_synth.dcp' has been generated.
+# launch_runs impl_1
+[Fri Apr  3 02:07:08 2026] Launched impl_1...
+Run output will be captured here: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/runme.log
+# wait_on_run impl_1
+[Fri Apr  3 02:07:08 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log SPC_FSM_stuck.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SPC_FSM_stuck.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source SPC_FSM_stuck.tcl -notrace
+Command: open_checkpoint C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck.dcp
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 859.258 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 951.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 6d19ca79
+----- Checksum: PlaceDB: 00000000 ShapeSum: 6d19ca79 RouteDB: 00000000 
+open_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 955.574 ; gain = 635.703
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1006.488 ; gain = 29.484
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1544.211 ; gain = 537.723
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.120 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.189 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 951d3b4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1878.672 ; gain = 923.098
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file SPC_FSM_stuck_drc_opted.rpt -pb SPC_FSM_stuck_drc_opted.pb -rpx SPC_FSM_stuck_drc_opted.rpx
+Command: report_drc -file SPC_FSM_stuck_drc_opted.rpt -pb SPC_FSM_stuck_drc_opted.pb -rpx SPC_FSM_stuck_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6d19ca79
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1bb7f8117
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.503 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.595 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.602 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.613 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.624 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.625 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2175f0f91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.626 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+WARNING: [Place 46-29] Timing had been disabled during Placer and, therefore, physical synthesis in Placer will be skipped.
+Phase 2.4 Global Placement Core | Checksum: 1bc465bac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1bc465bac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1bc465bac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ee92c817
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 28d397d82
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 28d397d82
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1f1e60ac8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.672 ; gain = 0.000
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19f35bf6d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+Ending Placer Task | Checksum: 17a0cc42a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1878.672 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 1885.047 ; gain = 6.375
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file SPC_FSM_stuck_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1885.047 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file SPC_FSM_stuck_utilization_placed.rpt -pb SPC_FSM_stuck_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file SPC_FSM_stuck_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1885.047 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1888.625 ; gain = 3.578
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.091 . Memory (MB): peak = 1906.465 ; gain = 17.840
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: d2393b17 ConstDB: 0 ShapeSum: a7d38913 RouteDB: 0
+Post Restoration Checksum: NetGraph: fab8b873 NumContArr: 24259d6e Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 11ede55e1
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 2004.375 ; gain = 88.762
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 11ede55e1
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 2010.992 ; gain = 95.379
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 11ede55e1
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 2010.992 ; gain = 95.379
+ Number of Nodes with overlaps = 0
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 24
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 24
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 08466b29
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 08466b29
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 2024.652 ; gain = 109.039
+Phase 3 Initial Routing | Checksum: bfee6cb4
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+Phase 4 Rip-up And Reroute | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+Phase 6 Post Hold Fix | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00626489 %
+  Global Horizontal Routing Utilization  = 0.00515551 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 18.9189%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 1.8018%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 4.41176%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 7.35294%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: a451d2f0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 99fa7d36
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.652 ; gain = 109.039
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+56 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:43 . Memory (MB): peak = 2024.652 ; gain = 118.188
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2034.301 ; gain = 9.648
+INFO: [Common 17-1381] The checkpoint 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file SPC_FSM_stuck_drc_routed.rpt -pb SPC_FSM_stuck_drc_routed.pb -rpx SPC_FSM_stuck_drc_routed.rpx
+Command: report_drc -file SPC_FSM_stuck_drc_routed.rpt -pb SPC_FSM_stuck_drc_routed.pb -rpx SPC_FSM_stuck_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file SPC_FSM_stuck_methodology_drc_routed.rpt -pb SPC_FSM_stuck_methodology_drc_routed.pb -rpx SPC_FSM_stuck_methodology_drc_routed.rpx
+Command: report_methodology -file SPC_FSM_stuck_methodology_drc_routed.rpt -pb SPC_FSM_stuck_methodology_drc_routed.pb -rpx SPC_FSM_stuck_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.runs/impl_1/SPC_FSM_stuck_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file SPC_FSM_stuck_power_routed.rpt -pb SPC_FSM_stuck_power_summary_routed.pb -rpx SPC_FSM_stuck_power_routed.rpx
+Command: report_power -file SPC_FSM_stuck_power_routed.rpt -pb SPC_FSM_stuck_power_summary_routed.pb -rpx SPC_FSM_stuck_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+67 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file SPC_FSM_stuck_route_status.rpt -pb SPC_FSM_stuck_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file SPC_FSM_stuck_timing_summary_routed.rpt -pb SPC_FSM_stuck_timing_summary_routed.pb -rpx SPC_FSM_stuck_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file SPC_FSM_stuck_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file SPC_FSM_stuck_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file SPC_FSM_stuck_bus_skew_routed.rpt -pb SPC_FSM_stuck_bus_skew_routed.pb -rpx SPC_FSM_stuck_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 02:09:01 2026...
+[Fri Apr  3 02:09:09 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:02:02 . Memory (MB): peak = 981.434 ; gain = 0.000
+# open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 981.434 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.433 . Memory (MB): peak = 1093.289 ; gain = 24.820
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.435 . Memory (MB): peak = 1093.289 ; gain = 24.820
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1479.551 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.551 ; gain = 498.117
+# report_utilization    -file [file join $build_dir utilization.rpt]
+# report_timing_summary -file [file join $build_dir timing_summary.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1657.676 ; gain = 178.125
+# set sim_log [file join $build_dir sim.log]
+# if {$run_sim} {
+#   launch_simulation -simset sim_1 -mode behavioral
+#   log_wave -recursive *
+#   run all
+#   catch { write_waveform -file [file join $build_dir waveform.wdb] }
+#   if {[file exists "vivado.log"]} {
+#     file copy -force "vivado.log" $sim_log
+#   } else {
+#     # create empty log
+#     set fd [open $sim_log w]; puts $fd "No vivado.log"; close $fd
+#   }
+# } else {
+#   # no sim run
+#   set fd [open $sim_log w]; puts $fd "Simulation not run (no TB)"; close $fd
+# }
+Command: launch_simulation  -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'SPC_FSM_stuck_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'SPC_FSM_stuck_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj SPC_FSM_stuck_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/rtl/SPC_FSM_stuck.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SPC_FSM_stuck'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SPC_FSM_stuck_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot SPC_FSM_stuck_tb_behav xil_defaultlib.SPC_FSM_stuck_tb -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot SPC_FSM_stuck_tb_behav xil_defaultlib.SPC_FSM_stuck_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.env
+Compiling architecture behavioral of entity xil_defaultlib.SPC_FSM_stuck [spc_fsm_stuck_default]
+Compiling architecture behavioral of entity xil_defaultlib.spc_fsm_stuck_tb
+Built simulation snapshot SPC_FSM_stuck_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/SPC_FSM_stuck_g_/SPC_FSM_stuck_bug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SPC_FSM_stuck_tb_behav -key {Behavioral:sim_1:Functional:SPC_FSM_stuck_tb} -tclbatch {SPC_FSM_stuck_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source SPC_FSM_stuck_tb.tcl
+## current_wave_config
+Error: BUG: STUCK
+Time: 55 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: FSM Busy
+Time: 55 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: FSM Busy
+Time: 65 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: FSM Busy
+Time: 75 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: FSM Busy
+Time: 85 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: FSM Busy
+Time: 95 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 105 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 115 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 125 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 135 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 145 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 155 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 165 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 175 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 185 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 195 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 205 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 215 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 225 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 235 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 245 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 255 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 265 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 275 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 285 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 295 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 305 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Simulation completed successfully.
+Time: 310 ns  Iteration: 0  Process: /SPC_FSM_stuck_tb/stimulus  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 315 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 325 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 335 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 345 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 355 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+$stop called at time : 360 ns : File "C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd" Line 161
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SPC_FSM_stuck_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1668.910 ; gain = 11.234
+WARNING: [Simtcl 6-55] No matching HDL object or HDL scope found
+Note: Transaction Done. Data Out = 0
+Time: 365 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 375 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 385 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 395 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 405 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 415 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 425 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 435 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 445 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 455 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 465 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 475 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 485 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 495 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 505 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 515 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 525 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 535 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 545 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 555 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 565 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 575 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 585 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 595 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 605 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 615 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 625 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 635 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 645 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 655 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 665 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Simulation completed successfully.
+Time: 670 ns  Iteration: 0  Process: /SPC_FSM_stuck_tb/stimulus  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 675 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 685 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 695 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 705 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+Note: Transaction Done. Data Out = 0
+Time: 715 ns  Iteration: 1  Process: /SPC_FSM_stuck_tb/monitor  File: C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd
+$stop called at time : 720 ns : File "C:/Users/narsi/Desktop/projects/Project_BUG/SPC_FSM/SPC_FSM_stuck/SPC_FSM_stuck_D/tb/SPC_FSM_stuck_tb.vhd" Line 161

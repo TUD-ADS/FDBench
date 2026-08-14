@@ -1,0 +1,26 @@
+{
+  "id": "UART_TX_cdc_golden",
+  "module": "UART_TX_cdc",
+  "category": "sequential_logic",
+  "bug_type": "CDC_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "",
+    "timing": ""
+  },
+  "results": {
+    "lut_used": null,
+    "ff_used": null,
+    "worst_slack_ns": null,
+    "assertions_failed": 1,
+    "assert_tags": ["CDC_BUG"],
+    "Number_of_Probe": 17,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 1
+  },
+  "notes": "Auto-generated metadata for UART_TX_cdc."
+}

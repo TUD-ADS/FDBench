@@ -1,0 +1,28 @@
+{
+  "id": "f_fir_cdc_buggy",
+  "module": "f_fir_cdc",
+  "category": "sequential_logic",
+  "bug_type": "CDC_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_cdc\\f_fir_cdc_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\f_fir\\f_fir_cdc\\f_fir_cdc_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 255,
+    "ff_used": 265,
+    "worst_slack_ns": null,
+    "assertions_failed": 42,
+    "assert_tags": [
+      "CDC_BUG"
+    ],
+    "Number_of_Probe": 12,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 20
+  },
+  "notes": "Auto-generated metadata for f_fir_cdc."
+}

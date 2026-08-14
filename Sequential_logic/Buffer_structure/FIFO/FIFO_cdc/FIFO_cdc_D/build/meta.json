@@ -1,0 +1,29 @@
+{
+  "id": "FIFO_cdc_buggy",
+  "module": "FIFO_cdc",
+  "category": "sequential_logic",
+  "bug_type": "UNDERFLOW_DETECTED, CDC_BUG",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\FIFO_cdc\\FIFO_cdc_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\FIFO_cdc\\FIFO_cdc_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 32,
+    "ff_used": 30,
+    "worst_slack_ns": null,
+    "assertions_failed": 40,
+    "assert_tags": [
+      "UNDERFLOW_DETECTED",
+      "CDC_BUG"
+    ],
+    "Number_of_Probe": 14,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 32
+  },
+  "notes": "Auto-generated metadata for FIFO_cdc."
+}

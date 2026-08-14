@@ -1,0 +1,28 @@
+{
+  "id": "jonson_counter_cgat_buggy",
+  "module": "jonson_counter_cgat",
+  "category": "sequential_logic",
+  "bug_type": "OVERFLOW_DETECTED",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\jonson_counter\\jonson_counter_cgat\\jonson_counter_cgat_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\jonson_counter\\jonson_counter_cgat\\jonson_counter_cgat_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 2,
+    "ff_used": 6,
+    "worst_slack_ns": null,
+    "assertions_failed": 43,
+    "assert_tags": [
+      "OVERFLOW_DETECTED"
+    ],
+    "Number_of_Probe": 5,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 12
+  },
+  "notes": "Auto-generated metadata for jonson_counter_cgat."
+}

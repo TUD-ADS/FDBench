@@ -1,0 +1,28 @@
+{
+  "id": "SPC_FSM_stuck_buggy",
+  "module": "SPC_FSM_stuck",
+  "category": "control_logic",
+  "bug_type": "STUCK",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\SPC_FSM\\SPC_FSM_stuck\\SPC_FSM_stuck_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\SPC_FSM\\SPC_FSM_stuck\\SPC_FSM_stuck_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 7,
+    "ff_used": 2,
+    "worst_slack_ns": null,
+    "assertions_failed": 1,
+    "assert_tags": [
+      "STUCK"
+    ],
+    "Number_of_Probe": 16,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 1
+  },
+  "notes": "Auto-generated metadata for SPC_FSM_stuck."
+}

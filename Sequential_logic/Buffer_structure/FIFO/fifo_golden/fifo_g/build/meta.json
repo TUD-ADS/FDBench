@@ -1,0 +1,26 @@
+{
+  "id": "fifo_golden",
+  "module": "fifo",
+  "category": "sequential_logic",
+  "bug_type": "None",
+  "status": "Pass",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\fifo_g\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\fifo\\fifo_g\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 35,
+    "ff_used": 32,
+    "worst_slack_ns": null,
+    "assertions_failed": 0,
+    "assert_tags": [],
+    "Number_of_Probe": 14,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 0
+  },
+  "notes": "Auto-generated metadata for fifo."
+}

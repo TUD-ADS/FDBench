@@ -1,0 +1,28 @@
+{
+  "id": "FIR_Filter_cgat_buggy",
+  "module": "FIR_Filter_cgat",
+  "category": "dsp_blocks",
+  "bug_type": "CLOCK_GATTING",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\FIR\\FIR_Filter_cgat\\FIR_Filter_cgat_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\FIR\\FIR_Filter_cgat\\FIR_Filter_cgat_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 1,
+    "ff_used": 480,
+    "worst_slack_ns": null,
+    "assertions_failed": 47,
+    "assert_tags": [
+      "CLOCK_GATTING"
+    ],
+    "Number_of_Probe": 10,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 22
+  },
+  "notes": "Auto-generated metadata for FIR_Filter_cgat."
+}

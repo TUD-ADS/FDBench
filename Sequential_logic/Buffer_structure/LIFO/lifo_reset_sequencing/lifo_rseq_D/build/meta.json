@@ -1,0 +1,30 @@
+{
+  "id": "lifo_rseq_buggy",
+  "module": "lifo_rseq",
+  "category": "sequential_logic",
+  "bug_type": "UNDERFLOW_DETECTED, OVERFLOW_DETECTED, RESET_SEQUENCE",
+  "status": "Fail",
+  "tool": "Vivado 2022.2",
+  "device": "xc7z020clg484-1",
+  "reports": {
+    "utilization": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\lifo\\lifo_rseq\\lifo_rseq_D\\build\\utilization.rpt",
+    "timing": "C:\\Users\\narsi\\Desktop\\projects\\Project_BUG\\lifo\\lifo_rseq\\lifo_rseq_D\\build\\timing_summary.rpt"
+  },
+  "results": {
+    "lut_used": 22,
+    "ff_used": 14,
+    "worst_slack_ns": null,
+    "assertions_failed": 60,
+    "assert_tags": [
+      "UNDERFLOW_DETECTED",
+      "OVERFLOW_DETECTED",
+      "RESET_SEQUENCE"
+    ],
+    "Number_of_Probe": 10,
+    "Capture_Depth": 1024,
+    "Trigger_Window": 1,
+    "Buffer_Size": 1,
+    "Probe_ERROR": 38
+  },
+  "notes": "Auto-generated metadata for lifo_rseq."
+}
