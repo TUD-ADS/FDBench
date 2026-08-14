@@ -1,10 +1,5 @@
 # FDBench: A Paired Golden-Buggy Benchmark for FPGA Debugging
 
-##  Code Availability
-
-The full benchmark and source code will be released after the conference publication.
-
----
 
 ##  Citation
 
