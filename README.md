@@ -7,6 +7,8 @@ If you use this benchmark in your research, please cite our paper:
 
 FDBench: A Paired Golden-Buggy Benchmark for FPGA Debugging
 
+https://doi.org/10.1145/3814576.3814593
+
 ---
 
 ##  Overview
