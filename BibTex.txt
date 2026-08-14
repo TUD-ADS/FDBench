@@ -1,0 +1,15 @@
+@inproceedings{10.1145/3814576.3814593,
+author = {Lu, Yanjun and Kalms, Lester and Joshi, Narasingh Prasad and G{\"o}hringer, Diana},
+title = {FDBench: A Paired Golden-Buggy Benchmark for FPGA Debugging},
+year = {2026},
+isbn = {9798400724527},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3814576.3814593},
+doi = {10.1145/3814576.3814593},
+booktitle = {Proceedings of the 16th International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies},
+pages = {161–163},
+numpages = {3},
+keywords = {Benchmark, FPGA Debugging, FPGA Verification, Debugging Benchmark, FPGA Systems, Embedded Systems},
+series = {HEART '26}
+}
