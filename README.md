@@ -24,7 +24,7 @@ Unlike basic testbenches, this framework focuses on categorisation of  **real-wo
 ---
 
 
-The complete structure which is divided into different section will be as follows
+The complete structure, which is divided into different sections, will be as follows
 
 ## Circuit Types
 
@@ -67,7 +67,7 @@ Circuit Types
 
 Detect critical hardware issues such as:
 
-- FIFO overflow / underflow  
+- FIFO overflow/underflow  
 - Clock Domain Crossing (CDC) issues  
 - FSM deadlocks / illegal states  
 - Timing violations and metastability effects  
@@ -118,7 +118,7 @@ BugBench/
 
 ###  Add our Design
 
-Add our rtl/f_uart_cdc.vhd in your own design.
+Add our rtl/f_uart_cdc.vhd to your own design.
 
 Ensure the interface matches:
 - clk, rst
@@ -130,8 +130,8 @@ Ensure the interface matches:
 
 ##  Running on Windows
 
-1. Modify the build.tcl according your design
-2. Modify DUT and board name in `.bat` file  
+1. Modify the build.tcl according to your design
+2. Modify the DUT and board name in the `.bat` file  
 3. Double-click the `.bat` file  
 
 ### What to change in `build.tcl`:
@@ -145,14 +145,14 @@ set tb_top_e          "fsm_uart_wfsm_tb"
 ```
 
 ### Update in `runme.bat`:
-- Set correct Vivado environment path   
+- Set the correct Vivado environment path   
 
-1. replace the "call "C:\Xilinx\Vivado\2022.2\settings64.bat"" environment with your system vivado environment.
+1. Replace the "call "C:\Xilinx\Vivado\2022.2\settings64.bat"" environment with your system Vivado environment.
 
 - Update DUT name, board, and Python script path 
 
-2. change the path of tools/write_meta.py, device board, and dut name same as 
-module name 
+2. Change the path of tools/write_meta.py, device board, and DUT name to the same as 
+the module name 
 
 python "C:/Users/narsi/Desktop/projects/Project_BUG/tools/write_meta.py" ^
        "%cd%" ^
@@ -192,7 +192,7 @@ The testbench includes:
 
 ---
 
-##  Fault Injection Examples
+##  Bug Injection Examples
 
 You can validate your verification strength by introducing bugs:
 
@@ -217,7 +217,7 @@ You can extend this framework by:
 
 - Adding new assertions  
 - Increasing stress intensity  
-- Plugging different DUTs (FIFO, UART, AXI, etc.)  
+- Plugging in different DUTs (FIFO, UART, AXI, etc.)  
 
 ---
 
@@ -238,7 +238,7 @@ Ms. Yanjun Lu and Mr. Narasingh Prasad Joshi
 
 ## Acknowledgments
 
-This work was supported by the China Scholarship Council program (Project ID: 202108640001), the Federal Ministry of Research, Technology and Space of Germany and the Sächsische Staatsministerium für Wissenschaft, Kultur und Tourismus in the programme Center of Excellence for AI research "Center for Scalable Data Analytics and Artificial Intelligence Dresden/Leipzig" , and the German Research Foundation (Deutsche Forschungsgemeinschaft, DFG) under Project-ID 287022738 TRR 196 for Project S05.
+This work was supported by the China Scholarship Council program (Project ID: 202108640001), the Federal Ministry of Research, Technology and Space of Germany and the Sächsische Staatsministerium für Wissenschaft, Kultur und Tourismus in the programme Center of Excellence for AI research "Center for Scalable Data Analytics and Artificial Intelligence Dresden/Leipzig", and the German Research Foundation (Deutsche Forschungsgemeinschaft, DFG) under Project-ID 287022738 TRR 196 for Project S05.
 
 
 
